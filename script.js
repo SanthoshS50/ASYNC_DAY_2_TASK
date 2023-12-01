@@ -1,34 +1,3 @@
-// const url = "https://restcountries.com/v3.1/all";
-// const result = fetch(url);
-//  result.then((data)=> data.json()).then((ele) => {
-//      const countryContainer = document.getElementById("countryContainer");
-
-//      for (let i = 0; i < ele.length; i++) {
-//          const card = document.createElement("div");
-//          card.className = "col";
-//          card.innerHTML = `
-//              <div class="card">
-//                  <div class="card-header">${ele[i].name.common}</div>
-//                  <img src="${ele[i].flags.png}" class="card-img-top" style="height: 150px;">
-//                  <div class="card-body">
-//                      <h5 class="card-title">Capital: ${ele[i].capital}</h5>
-//                      <h5 class="card-title">Region: ${ele[i].region}</h5>
-//                      <h5 class="card-title">Sub Region: ${ele[i].subregion}</h5>
-//                      <h5 class="card-title">LatLng: ${ele[i].latlng}</h5>
-//                  </div>
-//                  <button class="btn btn-primary" id="button">Click for Weather</button>
-//              </div>
-//          `;
-//          countryContainer.appendChild(card);
-//      }
-//  });
-
-
-
-
-//=========================
-
-
 const url = "https://restcountries.com/v3.1/all";
 const apiKey = "11a1a70f88f93d84c02889beb29c768e"; 
 
@@ -66,6 +35,8 @@ result.then((data) => data.json()).then((ele) => {
                     <h5 class="card-title">Capital: ${ele[i].capital}</h5>
                     <h5 class="card-title">Region: ${ele[i].region}</h5>
                     <h5 class="card-title">Sub Region: ${ele[i].subregion}</h5>
+                    <h5 class="card-title">Country Code: ${ele[i].cca2}</h5>
+
                     <h5 class="card-title">LatLng: ${ele[i].latlng}</h5>
                 </div>
                 <button class="btn btn-primary" onclick="handleWeatherButtonClick(${ele[i].latlng[0]}, ${ele[i].latlng[1]}, this.nextElementSibling)">Click for Weather</button>
